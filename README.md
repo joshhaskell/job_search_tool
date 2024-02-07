@@ -27,7 +27,7 @@ Create a `.env` file in the root of the project and add your OpenAI API key and 
 ## Usage
 
 To run the Streamlit application:
-streamlit run src/app.py
+```streamlit run src/app.py```
 
 
 This will start the Streamlit server, and you can view the app in your web browser.
