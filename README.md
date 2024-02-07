@@ -13,13 +13,13 @@ This project was designed to be a job search assistance tool built with Python a
 To set up the project locally, follow these steps:
 
 1. **Clone the repository:**
-git clone https://github.com/joshhaskell/job_search_tool.git
+'''git clone https://github.com/joshhaskell/job_search_tool.git'''
 
 2. **Navigate to the project directory:**
-cd job_search_tool
+'''cd job_search_tool'''
 
 3. **Install the required Python packages:**
-pip install -r requirements.txt
+'''pip install -r requirements.txt'''
 
 4. **Set up environment variables:**
 Create a `.env` file in the root of the project and add your OpenAI API key and database credentials:
