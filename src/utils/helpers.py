@@ -36,3 +36,17 @@ def get_sample_documents(doc_type, position_type, version=None):
     cur.close()
     conn.close()
     return document[0] if document else None
+
+def insert_application(application_date, job_title, company_name, job_location, document_id, resume, cover_letter=None, salary=None):
+    """Insert a new application into the applications table with additional job details."""
+    conn = connect_db()
+    cur = conn.cursor()
+    query = """
+    INSERT INTO applications (application_date, job_title, company_name, job_location, document_id, resume, cover_letter, salary)
+    VALUES (%s, %s, %s, %s, %s, %s, %s, %s);
+    """
+    cur.execute(query, (application_date, job_title, company_name, job_location, document_id, resume, cover_letter, salary))
+    conn.commit()
+    cur.close()
+    conn.close()
+

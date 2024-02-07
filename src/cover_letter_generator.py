@@ -25,7 +25,7 @@ def generate_cover_letter(job_description, position_type, version=None):
     additional_context = get_sample_documents("cover_letter", position_type)
 
     llm = OpenAI(api_key=openai_api_key)
-    prompt_template = "Given the role of {position_type} requiring {context_info}, please write a professional cover letter based on the following job description:\n{job_description}\n\nAdditional context:\n{additional_context}"
+    prompt_template = "Given the role of {position_type} requiring {context_info}, please write a professional cover letter based on the following job description:\n{job_description}\n\nSample Cover Letter:\n{additional_context}"
     prompt = PromptTemplate(
         input_variables=["position_type", "context_info", "job_description", "additional_context"], 
         template=prompt_template
