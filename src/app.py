@@ -2,10 +2,11 @@
 import streamlit as st
 from cover_letter_generator import generate_cover_letter
 from resume_customizer import customize_resume
-from utils.helpers import insert_application
+from utils.helpers import insert_application, create_tables
 from datetime import datetime
 
 def main():
+    create_tables()
     st.title('Job Search Helper')
 
     if 'form_key' not in st.session_state:
@@ -56,7 +57,8 @@ def main():
             job_title=job_title,
             company_name=company_name,
             job_location=job_location,
-            document_id=None, 
+            cover_letter_sample_doc_id=version,
+            resume_sample_doc_id=version,
             resume=st.session_state['resume_content'],
             cover_letter=st.session_state['cover_letter_content'] if st.session_state['cover_letter_content'] else None,
             salary=salary if salary else None 
