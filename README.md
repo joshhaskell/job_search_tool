@@ -13,27 +13,41 @@ This project was designed to be a job search assistance tool built with Python a
 To set up the project locally, follow these steps:
 
 1. **Clone the repository:**
-```git clone https://github.com/joshhaskell/job_search_tool.git```
 
-1. **Navigate to the project directory:**
-```cd job_search_tool```
+```
+git clone https://github.com/joshhaskell/job_search_tool.git
+```
 
-1. **Install the required Python packages:**
-```pip install -r requirements.txt```
+2. **Navigate to the project directory:**
 
-1. **Set up environment variables:**
+```
+cd job_search_tool
+```
+
+3. **Install the required Python packages:**
+
+```
+pip install -r requirements.txt
+```
+
+4. **Set up environment variables:**
 Create a `.env` file in the root of the project and add your OpenAI API key and database credentials:
+```sh
 DB_HOST = 'your_db_host'
 DB_NAME = 'your_db_name'
 DB_USER = 'your_db_user'
 DB_PASSWORD = 'your_db_password'
 DB_PORT = 'your_db_port'
 OPENAI_API_KEY = 'your_openai_api_key'
+```
 
 ## Usage
 
 To run the Streamlit application:
-```streamlit run src/app.py```
+
+```
+streamlit run src/app.py
+```
 
 
 This will start the Streamlit server, and you can view the app in your web browser.
